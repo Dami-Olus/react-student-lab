@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Student() {
+function Student({student}) {
   return (
     <div>
-      
+ this is a student
     </div>
   )
 }
