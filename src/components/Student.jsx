@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Score from "./Score";
+import './Student.css'
+import StudentInfo from "./StudentInfo";
 
 function Student({ students }) {
+  const [showScores, setShowScores] = useState('none')
+
+  const handleShowScores = () => {
+   showScores==='none'?setShowScores(""):setShowScores("none")
+  }
+
   return (
-    <div>
+    <div className="Students" >
       {students.map((student) => (
-        <div>
-          <p> {student.name}</p>
-          <p> {student.bio}</p>
-          <Score scores={student.scores} />
-        </div>
+       <StudentInfo student={student} />
       ))}
     </div>
   );

@@ -5,8 +5,8 @@ function Score({scores}) {
     <div>
       {scores.map(score => (
         <div>
-          <p>{score.date}</p>
-          <p>{score.score}</p>
+          <p>{score.date} - <strong>{score.score}</strong> </p>
+          
         </div>
       ))}
     </div>
