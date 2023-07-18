@@ -69,7 +69,7 @@ function App() {
 
   return (
     <>
-      <Student />
+      <Student students={students}/>
     </>
   );
 }

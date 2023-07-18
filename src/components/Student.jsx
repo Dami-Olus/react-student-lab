@@ -1,11 +1,16 @@
 import React from "react";
 import Score from "./Score";
 
-function Student({ student }) {
+function Student({ students }) {
   return (
     <div>
-      this is a student
-      <Score />
+      {students.map((student) => (
+        <div>
+          <p> {student.name}</p>
+          <p> {student.bio}</p>
+          <Score student={student} />
+        </div>
+      ))}
     </div>
   );
 }
