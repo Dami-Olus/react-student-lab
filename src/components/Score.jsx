@@ -1,8 +1,15 @@
 import React from 'react'
 
-function Score() {
+function Score({scores}) {
   return (
-    <div>THis is a score</div>
+    <div>
+      {scores.map(score => (
+        <div>
+          <p>{score.date}</p>
+          <p>{score.score}</p>
+        </div>
+      ))}
+    </div>
   )
 }
 

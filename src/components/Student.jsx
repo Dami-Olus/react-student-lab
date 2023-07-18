@@ -8,7 +8,7 @@ function Student({ students }) {
         <div>
           <p> {student.name}</p>
           <p> {student.bio}</p>
-          <Score student={student} />
+          <Score scores={student.scores} />
         </div>
       ))}
     </div>
